@@ -1,40 +1,43 @@
-body{
+body {
     background-color: #16212b;
     color: #fff;
 }
 
-form{
+form {
     position: relative;
     width: 800px;
     border: 1px solid #fff;
     padding-left: 20px;
 }
 
-textarea{
+textarea {
     outline: none;
 }
-select{
+
+select {
     width: 100px;
     height: 25px;
 }
 
-input,select,dl{
+input, select, dl {
     outline: none;
     margin: 10px;
 }
-img{
+
+img {
     position: absolute;
     top: 70px;
     right: 50px;
 }
-h3{
+
+h3 {
     margin-top: 50px;
 }
 
-a{
+a {
     color: #1a91db;
 }
 
-table{
+table {
     text-align: center;
 }
