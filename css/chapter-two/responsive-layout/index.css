@@ -1,0 +1,64 @@
+h1,h2,h3,h4,h5,h6,p,div {
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background:yellow;
+    padding: 8px;
+}
+.top-bar-text {
+    font-size: 24px;
+    text-align:center;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+.header-title {
+    margin-bottom: 16px;
+    font-size: 48px;
+}
+.header-subtitle {
+    font-size: 20px;
+}
+
+.nav-bar {
+    background-color: #333;
+    display: flex;
+}
+.nav-bar a {
+    padding: 14px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+.nav-bar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.main {
+    margin: 48px auto auto;
+    width: 1000px;
+}
+.block {
+    margin-bottom: 32px;
+}
+.block-title {
+    margin-bottom: 8px;
+}
+.block-subtitle {
+    margin-bottom: 16px;
+}
+.block-content {
+    margin-top: 16px;
+    font-size: 16px;
+}
+.img {
+    width: 800px;
+}

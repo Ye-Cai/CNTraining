@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .flex-demo {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .flex-container {
+            display: flex;
+            width: 100%;
+            min-height: 300px;
+            margin: 20px 0;
+            background-color: #ddd;
+        }
+        .flex-item {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #f3516d;
+        }
+        .flex-container.direction-column {
+            flex-direction: column;
+            height: 800px;
+        }
+        .flex-container.flex-end {
+            justify-content: flex-end;
+        }
+        .flex-container.space-around {
+            justify-content: space-around;
+        }
+        .flex-container.space-between {
+            justify-content: space-between;
+        }
+        .flex-container.center {
+            justify-content: center;
+        }
+        .flex-container.space-evenly {
+            justify-content: space-evenly;
+        }
+        .flex-container.align-center {
+            align-items: center;
+        }
+        .flex-container.align-end {
+            align-items: flex-end;
+        }
+        .flex-container.align-baseline {
+            align-items: baseline;
+        }
+        .flex-container.align-stretch {
+            align-items: stretch;
+        }
+        .flex-container.align-stretch .flex-item{
+            height: auto;
+        }
+        .flex-container.flex-wrap {
+            flex-wrap: wrap;
+        }
+        .flex-container.flex-basis:first-child {
+            flex-basis: 50%;
+        }
+        .flex-container.flex-grow-1 .flex-item, .flex-container.flex-grow-2 .flex-item{
+            flex-grow: 1;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .flex-container.flex-grow-2 .flex-item:first-child {
+            flex-grow: 3;
+        }
+        .flex-container.flex-shrink-1 .flex-item, .flex-container.flex-shrink-2 .flex-item {
+            flex-shrink: 1;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .flex-container.flex-shrink-2 .flex-item:first-child {
+            flex-shrink: 3;
+        }
+        .flex-container.flex-shrink-2 .flex-item:nth-child(2) {
+            flex-shrink: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="flex-demo">
+        <h1>flex-direction</h1>
+        <h2>flex-direction: row (默认值)</h2>
+        <div class="flex-container">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>flex-direction: column </h2>
+        <div class="flex-container direction-column">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+    </div>
+    <div class="flex-demo">
+        <h1>justify-content</h1>
+        <h2>justify-content: flex-start (默认值)</h2>
+        <div class="flex-container">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>justify-content: flex-end</h2>
+        <div class="flex-container flex-end">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>justify-content: center</h2>
+        <div class="flex-container center">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>justify-content: space-around</h2>
+        <div class="flex-container space-around">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>justify-content: space-between</h2>
+        <div class="flex-container space-between">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>justify-content: space-evenly</h2>
+        <div class="flex-container space-evenly">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+    </div>
+    <div class="flex-demo">
+        <h1>align-items</h1>
+        <h2>align-items: flex-end</h2>
+        <div class="flex-container align-end">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>align-items: center</h2>
+        <div class="flex-container align-center">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>align-items: baseline</h2>
+        <div class="flex-container align-baseline">
+            aaaaaaaaaaaaaaa
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            aaaaaaaaaaaaaaa
+        </div>
+        <h2>align-items: stretch</h2>
+        <div class="flex-container align-stretch">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+    </div>
+    <div class="flex-demo">
+        <h1>flex-wrap</h1>
+        <h2>flex-wrap: nowrap </h2>
+        <div class="flex-container">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+        <h2>flex-wrap: wrap </h2>
+        <div class="flex-container flex-wrap">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+    </div>
+    <div class="flex-demo">
+        <h1>flex-basis</h1>
+        <div class="flex-container flex-basis">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+    </div>
+    <div class="flex-demo">
+        <h1>flex-grow</h1>
+        <div class="flex-container flex-grow-1">
+            <div class="flex-item">1</div>
+            <div class="flex-item">1</div>
+            <div class="flex-item">1</div>
+        </div>
+        <div class="flex-container flex-grow-2">
+            <div class="flex-item">3</div>
+            <div class="flex-item">1</div>
+            <div class="flex-item">1</div>
+        </div>
+    </div>
+    <div class="flex-demo">
+        <h1>flex-shrink</h1>
+        <div class="flex-container flex-shrink-1">
+            <div class="flex-item">1</div>
+            <div class="flex-item">1</div>
+            <div class="flex-item">1</div>
+        </div>
+        <div class="flex-container flex-shrink-2">
+            <div class="flex-item">3</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">1</div>
+        </div>
+    </div>
+</body>
+</html>

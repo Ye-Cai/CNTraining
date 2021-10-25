@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position为static</title>
+    <style>
+        p {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid lightcoral;
+            font-size: 20px;
+        }
+        span {
+            /* position is static by default */
+            background-color: lightcoral;
+            color: #fff;
+        }
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: lightcoral;
+            color: #fff;
+        }
+        .div1 {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid cadetblue;
+        }
+        .absolute {
+            position: absolute;
+            top: 100px;
+            left: 40px;
+            border: 2px solid lightcoral;
+        }
+        .fixed {
+            position: fixed;
+            right: 10px;
+            bottom: 0;
+            width: 150px;
+            border: 2px solid lightcoral;
+        }
+        .sticky {
+            position: sticky;
+            top: 20px;
+            left: 20px;
+            background-color: lightcoral;
+            color: #fff;
+        }
+        .p1 {
+            max-height: 100px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <p><span>position值默认为static</span>，按普通文档流定位。普通流中元素框的位置由元素在HTML中的位置决定。block元素从上到下依次垂直排列，inline元素在一行中水平排列。</p>
+    <p><span class="relative">position值为relative</span>，表示相对定位。在一个相对定位的元素上设置 top 、 right 、 bottom 和 left 属性会使其偏离其正常位置，相对于其正常（原来）位置进行定位，但其仍然占据原来的空间。</p>
+    <div class="div1">
+        <span class="absolute">绝对定位元素</span>
+        <p>绝对定位元素会脱离文档流，相对距离它最近的一个position不为static的祖先元素进行偏移。即，普通文档流中其他元素的布局就像绝对定位的元素不存在一样。</p>
+    </div>
+    <p class="fixed">固定定位类似绝对定位，区别在于元素本身相对于视图进行定位。</p>
+    <p class="p1">
+        <span class="sticky">position值为sticky</span>
+        sticky 英文字面意思是粘，粘贴，所以可以把它称之为粘性定位。position: sticky; 基于用户的滚动位置来定位。粘性定位的元素是依赖于用户的滚动，在 position:relative 与 position:fixed 定位之间切换。它的行为就像 position:relative; 而当页面滚动超出目标区域时，它的表现就像 position:fixed;，它会固定在目标位置。
+    </p>
+</body>
+</html>

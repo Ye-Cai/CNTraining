@@ -1,0 +1,43 @@
+.top-bar {
+    padding: 0.75rem;
+}
+.top-bar-text {
+    font-size: 1.5rem;
+}
+
+.header {
+    padding: 3.75rem;
+}
+.header-title {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+.header-subtitle {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 767px){
+    html {
+        font-size: 75%;
+    }
+}
+
+/* 大部分平板 */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+/*!* 大屏mobile和小部分平板 *!*/
+/*@media only screen and (max-width: 767px) and (min-width: 600px) {*/
+/*    html {*/
+/*        font-size: 75%;*/
+/*    }*/
+/*}*/
+/*!* 大部分mobile *!*/
+/*@media only screen and (max-width: 599px) and (orientation: portrait) {*/
+/*    html {*/
+/*        font-size: calc(100/375 * 12vw);  !* mobile 以设计图iphone X尺寸为例： 1px = 100/375vw  12px = 3.2vw = 1rem *!*/
+/*    }*/
+/*}*/

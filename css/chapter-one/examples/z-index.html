@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>z-index</title>
+    <style>
+        .relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid cadetblue;
+        }
+        p {
+            position: absolute;
+        }
+        .p1 {
+            top: 100px;
+            left: 40px;
+            background-color: bisque;
+            z-index: 1;
+        }
+        .p2 {
+            top: 110px;
+            left: 50px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div class="relative">
+    <p class="p1">我的层级高</p>
+    <p class="p2">我的层级低</p>
+</div>
+</body>
+</html>

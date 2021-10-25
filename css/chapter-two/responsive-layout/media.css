@@ -1,0 +1,30 @@
+@media(max-width: 768px) {
+    .nav-bar a {
+        display: block;
+    }
+    .main {
+        width: 100%;
+    }
+    /*.top-bar-text {*/
+    /*    font-size: 16px;*/
+    /*}*/
+    /*.header {*/
+    /*    padding: 32px;*/
+    /*}*/
+    /*.header-title {*/
+    /*    margin-bottom: 8px;*/
+    /*    font-size: 32px;*/
+    /*}*/
+    /*.header-subtitle {*/
+    /*    font-size: 16px;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 1200px) {
+    .main {
+        display: flex;
+    }
+    .block {
+        margin:0 1rem;
+    }
+}

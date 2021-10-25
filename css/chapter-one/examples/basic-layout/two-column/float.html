@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float实现两列布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #bd4257;
+            border-bottom: 2px solid #bd4257;
+        }
+        body {
+            font-family: Inter,Noto Sans SC,sans-serif;
+            background-color: whitesmoke;
+        }
+        .wrapper {
+            margin: 0 auto;
+            max-width: 1024px;
+            min-width: 700px;
+        }
+        header {
+            padding: 20px 40px;
+            font-size: 50px;
+            background-color: silver;
+        }
+        main {
+            margin: 0 auto;
+            background-color: #fff;
+            overflow: auto;
+        }
+        nav {
+            float: left;
+            padding: 10px;
+            width: 180px;
+        }
+        nav li {
+            padding: 0;
+            margin: 4px 0;
+            color: #000;
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 700;
+        }
+        .article {
+            padding: 0 10px 20px;
+            margin-left: 200px;
+            border-left: 1px solid silver;
+        }
+        h1 {
+            padding: 20px 0;
+        }
+        .article p {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        footer {
+            padding: 20px 40px;
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <header>Blog</header>
+       <main>
+           <nav>
+               <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">HTML</a></li>
+                   <li><a href="#">CSS</a></li>
+                   <li><a href="#">JavaScript</a></li>
+                   <li><a href="#">About</a></li>
+               </ul>
+           </nav>
+           <section class="article">
+               <h1>What is CSS?</h1>
+               <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.</p>
+               <p>CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.</p>
+               <p>CSS can be used for very basic document text styling — for example changing the color and size of headings and links. It can be used to create layout — for example turning a single column of text into a layout with a main content area and a sidebar for related information. It can even be used for effects such as animation. Have a look at the links in this paragraph for specific examples.</p>
+               <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."</p>
+               <p>As there are so many things that you could style using CSS, the language is broken down into modules. You'll see reference to these modules as you explore MDN and many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the Backgrounds and Borders module to find out what its purpose is, and what different properties and other features it contains. You will also find links to the CSS Specification that defines the technology (see below).</p>
+               <p>As a newcomer to CSS, it is likely that you will find the CSS specs overwhelming — they are intended for engineers to use to implement support for the features in user agents, not for web developers to read to understand CSS. Many experienced developers would much rather refer to MDN documentation or other tutorials. It is however worth knowing that they exist, understanding the relationship between the CSS you are using, browser support (see below), and the specs.</p>
+           </section>
+       </main>
+       <footer>Footer</footer>
+    </div>
+</body>
+</html>

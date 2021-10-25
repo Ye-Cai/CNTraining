@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .title {
+            line-height: 50px;
+            font-weight: bold;
+            font-size: 24px;
+            border-top: 1px dotted;
+        }
+        /* unvisited link */
+        a:link {
+            color: #000;
+        }
+
+        /* visited link */
+        a:visited {
+            color: slategray;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: lightcoral;
+        }
+
+        /* selected link */
+        a:active {
+            color: darkcyan;
+        }
+        .div1 {
+            width: 250px;
+            color: #fff;
+            line-height: 45px;
+            text-align: center;
+            background-color: lightseagreen;
+        }
+        .div1:hover {
+            color: #fff;
+            background-color: lightcoral;
+        }
+        ul.breadcrumb1 {
+            margin-top: 50px;
+            background-color: lightgray;
+            width: 150px;
+        }
+        .breadcrumb1 li {
+            list-style-type: none;
+            padding: 0 10px;
+            font-size: 20px;
+            line-height: 40px;
+        }
+        .breadcrumb1 li:hover {
+            cursor: pointer;
+        }
+
+        .breadcrumb1 li:first-child {
+            background-color: dimgrey;
+            color: #fff;
+        }
+
+        .p1::first-letter {
+            color: lightcoral;
+        }
+        .p2::first-line {
+            color: lightcoral;
+        }
+        .p3::before {
+            content: url(assets/logo.svg);
+            width: 150px;
+            display: inline-block;
+        }
+        .p4::after {
+            content: url(assets/logo.svg);
+            width: 150px;
+            display: inline-block;
+        }
+        .p5::selection {
+            color: lightcoral;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 400px;
+        }
+        .row {
+            margin-bottom: 8px;
+            overflow: auto;
+        }
+        label {
+            float: left;
+            width: 20%;
+            line-height: 40px;
+        }
+        input[type=text], input[type=password] {
+            float: left;
+            padding: 2px 20px;
+            width: 80%;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        input[type=submit], input[type=reset] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+        input[type=reset] {
+            margin-right: 20px;
+        }
+        .btns {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            padding: 8px 16px;
+            list-style: none;
+            background-color: #eee;
+        }
+        .breadcrumb li {display: inline;}
+        .breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+            /*\00a0: &nbsp;*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="title">伪类选择器：</p>
+        <a href="#">这是一个链接</a>
+        <div class="div1">div元素也可以设置悬停时样式</div>
+        <ul class="breadcrumb1">
+            <li>Home</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div>
+        <p class="title">伪元素选择器：</p>
+        <p class="p3">logo</p>
+        <p class="p4">logo</p>
+        <p class="p1">First-letter</p>
+        <p class="p2">CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.</p>
+        <p class="p5">选中文本试试</p>
+    </div>
+    <div>
+        <p class="title">属性选择器：</p>
+        <form>
+            <div class="row">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name">
+            </div>
+            <div class="row">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name">
+            </div>
+            <div class="row">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="btns">
+                <input type="reset" value="重置">
+                <input type="submit" value="提交">
+            </div>
+        </form>
+    </div>
+    <div>
+        <p class="title">组合选择器：</p>
+        <ul class="breadcrumb">
+            <li>首页</li>
+            <li>前端</li>
+            <li>HTML 教程</li>
+            <li>HTML 段落</li>
+        </ul>
+    </div>
+</body>
+</html>

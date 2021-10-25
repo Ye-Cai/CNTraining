@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        .example1 {
+            margin: 20px auto;
+            padding: 10px;
+            width: 300px;
+            background-color: aliceblue;
+        }
+        .logo {
+            float: right;
+            margin-left: 5px;
+            width: 200px;
+        }
+        .box-wrapper {
+            overflow: auto;
+            /*font-size: 0;*/
+        }
+        .box {
+            float: left;
+            /*display: inline-block;*/
+            /*box-sizing: border-box;*/
+            width: calc(25% - 20px);
+            padding: 10px;
+        }
+        img {
+            width: 100%;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: red;
+        }
+        p {
+            font-size: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="example1">
+        <img class="logo" src="assets/logo.svg" alt="">
+        <p>Founded in 1993, we’ve grown from a small team in Chicago to a leading technology consultancy of more than 9,000 Thoughtworkers in 17 countries. Our cross-functional teams of strategists, developers, data engineers and designers bring over two decades of global experience to every partnership.</p>
+    </div>
+    <div class="box-wrapper">
+        <div class="box"><img src="assets/social.jpeg" alt=""></div>
+        <div class="box"><img src="assets/social.jpeg" alt=""></div>
+        <div class="box"><img src="assets/social.jpeg" alt=""></div>
+        <div class="box"><img src="assets/social.jpeg" alt=""></div>
+    </div>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</body>
+</html>
