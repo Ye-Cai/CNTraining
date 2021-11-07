@@ -2,6 +2,7 @@
     display: flex;
     margin-bottom: 20px;
 }
+
 .button1 {
     display: inline-block;
     padding: 15px 25px;
@@ -13,6 +14,18 @@
     color: #fff;
     background-color: #4CAF50;
     border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 0 0 rgb(153 153 153);
+}
+
+.button1:hover {
+    background-color: #3e8e41;
+}
+
+.button1:active {
+    background-color: #3e8e41;
+    transform: translateY(5px);
+    box-shadow: 0 5px 0 0 rgb(66 66 66);
 }
 
 .button2 {
@@ -32,14 +45,31 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
+    transition: all 0.5s;
 }
 
-.button2 span:after {
+.button2:hover span {
+    transform: translateX(-15px);
+}
+
+.button2:hover span:after {
     content: '»';
     position: absolute;
-    opacity: 0;
     top: 0;
     right: -20px;
+    animation: append-suffix 0.5s linear;
+}
+
+@keyframes append-suffix {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1.0;
+    }
 }
 
 .box {
@@ -48,7 +78,9 @@
     height: 150px;
     width: 350px;
     border: 2px solid;
+    overflow: hidden;
 }
+
 .badge {
     position: absolute;
     top: 0;
@@ -59,4 +91,5 @@
     background-color: #bd4257;
     color: #fff;
     text-align: center;
+    transform: rotate(45deg) translate(37px, -4px);
 }
