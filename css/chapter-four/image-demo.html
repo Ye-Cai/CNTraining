@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片处理</title>
+    <style>
+        .img-demo {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+        .img-demo--base {
+            width: 400px;
+            height: 200px;
+            margin: 20px 0;
+        }
+        .img-demo--case1 {
+            width: 400px;
+        }
+        .img-demo--case2 {
+            height: 200px;
+        }
+        .img-demo--case3 {
+            object-fit: cover;
+        }
+        .img-demo--case4 {
+            border: 2px solid #bd4257;
+            object-fit: contain;
+        }
+        .img-demo--case5 {
+            border: 2px solid #bd4257;
+            object-fit: contain;
+            object-position: right;
+        }
+        .img-demo--background-case1 {
+            border: 2px solid #bd4257;
+            background: url("./images/team1.jpeg");
+            background-size: cover;
+        }
+        .img-demo--background-case2 {
+            border: 2px solid #bd4257;
+            background: url("./images/team1.jpeg") center no-repeat;
+            background-size: contain;
+        }
+        .img-demo--load-none {
+            width: 400px;
+            display: inline-block;
+            border: 2px solid #bd4257;
+        }
+        .load-img-none {
+            width: 100%;
+        }
+        .img-demo--load-case1 {
+            position: relative;
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            padding-top: 75%;
+        }
+        .load-img-case1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-demo">
+        <h2>图片裁剪</h2>
+        <h3>图片宽度固定按比例显示</h3>
+        <img class="img-demo--case1" src="./images/team1.jpeg" >
+<!--        <img class="img-demo&#45;&#45;case1" src="https://mall.ftms.com.cn/img/usedCar/303b0c58-13b4-4277-970f-494fd1e33a81.png" >-->
+        <h3>图片高度固定按比例显示</h3>
+        <img class="img-demo--case2" src="./images/team1.jpeg" >
+        <h3>图片按比例裁剪 object-fit</h3>
+        <img class="img-demo--base img-demo--case3" src="./images/team1.jpeg" >
+        <img class="img-demo--base" src="./images/team1.jpeg" >
+        <img class="img-demo--base img-demo--case4" src="./images/team1.jpeg" >
+        <img class="img-demo--base img-demo--case5" src="./images/team1.jpeg" >
+        <h3>图片按比例裁剪 background</h3>
+        <div class="img-demo--base img-demo--background-case1"></div>
+        <div class="img-demo--base img-demo--background-case2"></div>
+        <h2>图片加载</h2>
+<!--        <div class="img-demo&#45;&#45;load-none">-->
+<!--            <img class="load-img-none" src="https://mall.ftms.com.cn/img/usedCar/303b0c58-13b4-4277-970f-494fd1e33a81.png" ><p>这是一个图片加载的例子</p>-->
+<!--        </div>-->
+        <div class="img-demo--load-none">
+            <div class="img-demo--load-case1">
+                <img class="load-img-case1" src="https://mall.ftms.com.cn/img/usedCar/303b0c58-13b4-4277-970f-494fd1e33a81.png" >
+            </div>
+            <p>这是一个图片加载的例子</p>
+        </div>
+    </div>
+</body>
+</html>

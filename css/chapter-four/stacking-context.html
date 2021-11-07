@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stacking context</title>
+    <style>
+        .stacking-context-demo {
+            font-size: 1.25rem;
+        }
+        .demo-case {
+            width: 100%;
+            height: 60vh;
+            border: 1px solid #333;
+            position: relative;
+        }
+        .box {
+            width: 60%;
+            height: 100px;
+            /*position: absolute;*/
+            /*float:left;*/
+        }
+        .box-absolute {
+            width: 45%;
+            height: 350px;
+            position: absolute;
+            text-align: right;
+        }
+        .z-index--1 {
+            z-index: 1;
+        }
+        .z-index--2 {
+            z-index: 2;
+        }
+        .z-index--3 {
+            z-index: 3;
+        }
+        .z-index--4 {
+            z-index: 4;
+        }
+        .bg-color1 {
+            background: #9e6af1;
+        }
+        .bg-color2 {
+            background: #4296bd;
+        }
+        .bg-color3 {
+            background: #4CAF50;
+        }
+        .bg-color4 {
+            background: #fdea3d;
+        }
+        .bg-color5 {
+            background: #f65027;
+        }
+        .bg-color6 {
+            background: #f31717;
+        }
+        .z-index--minus {
+            z-index: -1;
+        }
+        .transform-10 {
+            transform: translate(10%, 10%);
+        }
+        .transform-20 {
+            transform: translate(20%, 20%);
+        }
+        .transform-30 {
+            transform: translate(30%, 30%);
+        }
+        .transform-10--minus {
+            transform: translate(10%, -10%);
+        }
+        .transform-20--minus {
+            transform: translate(20%, -20%);
+        }
+        .transform-40 {
+            transform: translate(40%, 40%);
+        }
+        .box-relative {
+            position: relative;
+            width: 80%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="stacking-context-demo">
+        <h2>同一层级，谁靠后谁在上面</h2>
+        <div class="demo-case">
+            <div class="box bg-color1 z-index--3">box1</div>
+            <div class="box bg-color2 transform-10--minus z-index--2">box2</div>
+            <div class="box bg-color3 transform-20--minus z-index--1">box3</div>
+<!--            <div class="box bg-color2 transform-10">box2</div>-->
+<!--            <div class="box bg-color3 transform-20">box3</div>-->
+<!--            <div class="box-absolute bg-color4 transform-30">box5</div>-->
+        </div>
+        <h2>同一层级，z-index大的在上面</h2>
+        <div class="demo-case">
+            <div class="box-absolute bg-color1 z-index--4">box1</div>
+            <div class="box-absolute bg-color2 transform-10 z-index--3">box2</div>
+            <div class="box-absolute bg-color3 transform-20 z-index--2">box3</div>
+            <div class="box-absolute bg-color4 transform-30">box5</div>
+            <div class="box-absolute bg-color5 transform-40 z-index--minus">box6</div>
+        </div>
+        <h2>容易犯错的position relative和absolute</h2>
+        <div class="demo-case">
+            <div class="box-relative bg-color1 z-index--2">
+                relative1
+                <div class="box-absolute bg-color3 z-index--1">absolute in relative1</div>
+            </div>
+            <div class="box-relative bg-color2 z-index--1 transform-20--minus">
+                relative2
+                <div class="box-absolute bg-color4">absolute in relative2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直居中</title>
+    <style>
+        .vertical-demo {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+        .vertical-demo_text {
+            width: 300px;
+            margin: 20px 0;
+            text-align: center;
+            background: #ddd;
+        }
+        .text-case1 {
+            height: 100px;
+            line-height: 100px;
+        }
+        .text-case2 {
+            padding: 30px 0;
+        }
+        .text-case3 {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .text-case4 {
+            height: 300px;
+            display: table-cell;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+        .vertical-demo_block-parent {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px 0;
+            background: #ddd;
+        }
+        .vertical-demo_block-child {
+            margin: 0;
+            background: #f87c92;
+        }
+        .child-case1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -100px;
+        }
+        .child-case2 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        .parent-case3 {
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="vertical-demo">
+    <h2>文本内容的垂直居中</h2>
+    <h3>单行文本居中</h3>
+    <div class="vertical-demo_text text-case1">容器高度固定场景</div>
+    <div class="vertical-demo_text text-case2">容器高度不固定的场景 容器高度不固定的场景</div>
+    <h3>多行文本居中</h3>
+    <div class="vertical-demo_text text-case3"><span>容器高度固定，内容不固定的场景 flex方案</span></div>
+    <div class="vertical-demo_text text-case4"><span>容器高度固定，内容不固定的场景 table-cell方案</span></div>
+    <h2>块儿级元素的垂直居中</h2>
+    <h3>案例一：</h3>
+    <div class="vertical-demo_block-parent">
+        <p class="vertical-demo_block-child child-case1">元素高度固定</p>
+    </div>
+    <h3>案例二：</h3>
+    <div class="vertical-demo_block-parent">
+        <p class="vertical-demo_block-child child-case2">元素高度不固定 元素高度不固定</p>
+    </div>
+    <h3>案例三：</h3>
+    <div class="vertical-demo_block-parent parent-case3">
+        <p class="vertical-demo_block-child">多个元素垂直居中</p>
+        <p class="vertical-demo_block-child">多个元素垂直居中</p>
+    </div>
+</div>
+</body>
+</html>

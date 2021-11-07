@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编写可维护的css</title>
+    <style>
+        .button-example_group1 {
+            padding: 6px 16px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .button-example_group1--large {
+            padding: 10px 25px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 7px;
+            box-shadow: 0 2px 8px gray;
+            color: white;
+            text-shadow: 0 -2px 2px #335166;
+            font-size: 32px;
+            line-height: 48px;
+        }
+        .button-example_group1--red {
+            padding: 6px 16px;
+            border: 1px solid #b80703;
+            background: #c00 linear-gradient(#d94640, #c00);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #bd443d;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .button-example_group2 {
+            padding: 6px 16px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .button-example_group2--large {
+
+        }
+        .button-example_group2--red {
+
+        }
+        .button-example_group3 {
+            padding: 0.3em 0.8em;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(rgba(255,255,255,0.2), transparent);
+            border-radius: 0.2em;
+            box-shadow: 0 0.05em 0.25em rgba(0,0,0,0.5);
+            color: white;
+            text-shadow: 0 -0.05em 0.05em rgba(0,0,0,0.5);
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+        .button-example_group3--large {
+            font-size: 2rem;
+        }
+        .button-example_group3--red {
+            border-color: #b80401;
+            background-color: #c00;
+        }
+        .button-example_background-box--gray {
+            margin: 16px 0;
+            padding: 16px;
+            background-color: gray;
+        }
+        .form-example_block {
+            width: 500px;
+            padding: 20px 0;
+        }
+        input {
+            font: inherit;
+        }
+        .form-example_label {
+            display: block;
+        }
+        .form-example_input {
+            display: block;
+            margin: 16px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .form-example_tip {
+            position: relative;
+            padding: 8px;
+            display: inline-block;
+            border: 1px solid #bd4257;
+            border-radius: 5px;
+            background: #f8607a;
+            transform: translateY(-0.8em);
+        }
+        .form-example_tip::before {
+            content: "";
+            position: absolute;
+            top: -0.4em;
+            left: 1em;
+            padding: 0.35em;
+            background: #f8607a;
+            border: 1px solid #bd4257;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+        }
+        /*.form-example_tip::before {*/
+        /*    content: "";*/
+        /*    position: absolute;*/
+        /*    top: -0.4em;*/
+        /*    left: 1em;*/
+        /*    padding: 0.35em;*/
+        /*    background: inherit;*/
+        /*    border: inherit;*/
+        /*    border-right: 0;*/
+        /*    border-bottom: 0;*/
+        /*    transform: rotate(45deg);*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div>
+        <h2>开发一些公共的button，需要有基础类型的，还有放大的，还有可以支持多个背景颜色的</h2>
+        <h3>案例一：</h3>
+        <button class="button-example_group1">Yes!</button>
+        <button class="button-example_group1--large">Yes!</button>
+        <button class="button-example_group1--red">Cancel</button>
+        <div class="button-example_background-box--gray">
+            <button class="button-example_group1">Yes!</button>
+            <button class="button-example_group1--red">Cancel</button>
+        </div>
+        <h3>案例二：</h3>
+        <button class="button-example_group3">Yes!</button>
+        <button class="button-example_group3 button-example_group2--large">Yes!</button>
+        <button class="button-example_group3 button-example_group2--red">Cancel</button>
+        <div class="button-example_background-box--gray">
+            <button class="button-example_group3">Yes!</button>
+            <button class="button-example_group3 example-group2_button--red">Cancel</button>
+        </div>
+        <h2>实现一个提示框</h2>
+        <form class="form-example_block">
+            <label class="form-example_label" for="username">请输入用户名:</label>
+            <input class="form-example_input" id="username" type="text" value="runting" />
+            <div class="form-example_tip">
+                只能输入字符和数字和下划线！
+            </div>
+        </form>
+    </div>
+</body>
+</html>

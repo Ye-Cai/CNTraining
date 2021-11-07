@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水平居中</title>
+    <style>
+        .horizontal-demo {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+        .demo-text1 {
+            display: inline-block;
+            width: 200px;
+            background: #eee;
+            text-align: center;
+        }
+        .demo-text2 {
+            background: #eee;
+            padding: 10px 30px;
+        }
+        .demo-parent {
+            margin: 20px 0;
+            width: 600px;
+            height: 200px;
+            background: #ddd;
+        }
+        .demo-child {
+            height: 200px;
+            background: #f87c92;
+        }
+        .demo-parent--case1 .demo-child {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .demo-parent--case2 {
+            text-align: center;
+        }
+        .demo-parent--case2 .demo-child {
+            display: inline-block;
+        }
+        .demo-parent--case3 {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="horizontal-demo">
+    <h2>文本内容的水平居中</h2>
+    <span class="demo-text1">容器宽度固定</span>
+    <span class="demo-text2">容器宽度不固定</span>
+    <h2>块儿级元素水平居中</h2>
+    <h3>案例一：子元素宽度固定或相对宽度固定</h3>
+    <div class="demo-parent demo-parent--case1">
+        <div class="demo-child"><span>子元素宽度固定或相对宽度固定</span> <br/>  <code>margin: 0 auto;</code></div>
+    </div>
+    <h3>案例二：子元素宽度不固定</h3>
+    <div class="demo-parent demo-parent--case2">
+        <div class="demo-child"><span>子元素宽度不固定</span> <br/>  <code>display: inline-block; text-align: center;</code></div>
+    </div>
+    <h3>案例三：子元素宽度不固定</h3>
+    <div class="demo-parent demo-parent--case3">
+        <div class="demo-child"><span>子元素宽度不固定</span> <br/>  <code>display: flex; justify-content: center;</code></div>
+    </div>
+</div>
+</body>
+</html>
