@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            /*transform: translateX(45px);*/
+            /*transform: translate(45px,45px);*/
+            /*transform: rotate(45deg);*/
+            /*transform: scaleX(2);*/
+            /*transform: scale(2);*/
+            /*transform: skewX(45deg);*/
+        }
+        div {
+            position: relative;
+            margin: 20px 0 0 50px;
+            height: 150px;
+            width: 350px;
+            border: 2px solid;
+        }
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            width: 120px;
+            font-size: 12px;
+            background-color: #bd4257;
+            color: #fff;
+            text-align: center;
+        }
+        .div2 {
+            overflow: hidden;
+        }
+        .div2 .badge {
+            transform: rotate(45deg) translateX(38px) translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+    <img src="./assets/dog.jpeg" alt="">
+    <div class="div1">
+        <span class="badge">RECOMMENDED</span>
+        <p>This is a pragrapgh</p>
+    </div>
+    <div class="div2">
+        <span class="badge">RECOMMENDED</span>
+        <p>This is a pragrapgh</p>
+    </div>
+</body>
+</html>

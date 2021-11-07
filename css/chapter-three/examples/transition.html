@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 20px;
+            width:100px;
+            height:50px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            line-height: 50px;
+            background-color: lightcoral;
+        }
+        .div1:hover {
+            width:300px;
+        }
+        .div2 {
+            transition:width 2s;
+            /*transition: width 2s linear;*/
+            /*transition: width 2s linear 2s;*/
+        }
+        .div2:hover {
+            width:300px;
+        }
+        .div3 {
+            transition: width 2s, height 2s, line-height 2s, background-color 4s, transform 2s;
+            /*transition: all 2s;*/
+        }
+        .div3:hover {
+            width:300px;
+            height: 100px;
+            line-height: 100px;
+            background-color: lightslategray;
+            transform: rotate(360deg);
+        }
+        .div4 {
+            transition:width 2s;
+            /*transition: width 2s linear 2s;*/
+        }
+        .div4:active {
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">Hover试试</div>
+    <div class="div2">Hover试试</div>
+    <div class="div3">Hover试试</div>
+    <div class="div4">点击试试</div>
+</body>
+</html>

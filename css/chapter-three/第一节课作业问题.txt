@@ -1,0 +1,14 @@
+布局作业问题：
+
+1. 标签选用合理，文档结构清晰；
+2. 很多属性无需设置，比如布局时，一些元素也可以不用设置浮动；
+3. 页面上一些块级元素无需设置width，块级元素默认独占一行；宽度设置为100%，会出现横向滚动条，思考下为啥；
+4. 必要时候提取公共class，让class发挥作用；代码简介明了；
+5. top、bottom、left、right需结合position使用；
+6. 既然使用了定位，直接设置right为10px即可，不需要再设置margin-right。
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+
+    position: absolute;
+    right: 10px;

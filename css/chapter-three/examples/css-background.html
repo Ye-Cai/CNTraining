@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>background</title>
+    <style>
+        div {
+            width: 400px;
+            height: 200px;
+            margin-top: 10px;
+        }
+        .div1 {
+            background-image: url("assets/architect.jpeg");
+            /*background-size: 100% 100%;*/
+            /*background-size: cover;*/
+            /*background-size: contain;*/
+        }
+        .div2 {
+            background-image: url("assets/chick.png");
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            /*background-position: 20px 50px;*/
+        }
+        .div3 {
+            background-image: linear-gradient(lightcoral, lightgrey, lightslategray);
+        }
+        .div4 {
+            background-image: radial-gradient(lightcoral, lightgrey, lightslategray);
+        }
+        .div5 {
+            width: 100%;
+            height: 300px;
+            overflow: scroll;
+            background-image: url("assets/chick.png");
+            background-color: lightgray;
+            background-repeat: no-repeat;
+            background-position: center;
+            /*background-position: 30px 30px;*/
+            /*background-position: 50% 50%;*/
+            /*background-attachment: scroll;*/
+            /*background-attachment: local;*/
+            /*background-attachment: fixed;*/
+        }
+        .div6 {
+            padding: 35px;
+            height: auto;
+            border: 15px solid lightslategray;
+            background-repeat:no-repeat;
+            background-image: url("assets/chick.png");
+            background-origin: padding-box;
+            /*background-clip: content-box;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">CSS3以前，背景图像大小由图像的实际大小决定。</div>
+    <p>background-size取值为contain，表示保持背景图像本身的宽高比例，将背景图像缩放到宽度或高度正好适应容器。</p>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5">
+        <p>
+            There were doors all round the hall, but they were all locked; and when
+            Alice had been all the way down one side and up the other, trying every
+            door, she walked sadly down the middle, wondering how she was ever to
+            get out again.
+        </p>
+        <p>
+            Suddenly she came upon a little three-legged table, all made of solid
+            glass; there was nothing on it except a tiny golden key, and Alice's
+            first thought was that it might belong to one of the doors of the hall;
+            but, alas! either the locks were too large, or the key was too small,
+            but at any rate it would not open any of them. However, on the second
+            time round, she came upon a low curtain she had not noticed before, and
+            behind it was a little door about fifteen inches high: she tried the
+            little golden key in the lock, and to her great delight it fitted!
+        </p>
+        <p>
+            There were doors all round the hall, but they were all locked; and when
+            Alice had been all the way down one side and up the other, trying every
+            door, she walked sadly down the middle, wondering how she was ever to
+            get out again.
+        </p>
+        <p>
+            Suddenly she came upon a little three-legged table, all made of solid
+            glass; there was nothing on it except a tiny golden key, and Alice's
+            first thought was that it might belong to one of the doors of the hall;
+            but, alas! either the locks were too large, or the key was too small,
+            but at any rate it would not open any of them. However, on the second
+            time round, she came upon a low curtain she had not noticed before, and
+            behind it was a little door about fifteen inches high: she tried the
+            little golden key in the lock, and to her great delight it fitted!
+        </p>
+        <p>
+            There were doors all round the hall, but they were all locked; and when
+            Alice had been all the way down one side and up the other, trying every
+            door, she walked sadly down the middle, wondering how she was ever to
+            get out again.
+        </p>
+        <p>
+            Suddenly she came upon a little three-legged table, all made of solid
+            glass; there was nothing on it except a tiny golden key, and Alice's
+            first thought was that it might belong to one of the doors of the hall;
+            but, alas! either the locks were too large, or the key was too small,
+            but at any rate it would not open any of them. However, on the second
+            time round, she came upon a low curtain she had not noticed before, and
+            behind it was a little door about fifteen inches high: she tried the
+            little golden key in the lock, and to her great delight it fitted!
+        </p>
+    </div>
+    <div class="div6">
+        <p>background-origin属性指定了背景图像的位置区域：</p>
+        <ul>
+            <li>padding-box（默认值），从padding的外边缘开始显示背景图片</li>
+            <li>border-box，从border的外边缘开始显示背景图片</li>
+            <li>content-box，从content的外边缘开始显示背景图片</li>
+        </ul>
+        <p>background-clip定义背景图像的剪裁区域：</p>
+        <ul>
+            <li>padding-box，出现在padding区域之外的背景被裁剪</li>
+            <li>border-box（默认值），出现在border区域之外的背景被裁剪</li>
+            <li>content-box，content区域之外的背景被裁剪</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+.button1 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+}
+
+.button2 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.button2 span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+}
+
+.box {
+    position: relative;
+    margin: 20px;
+    height: 150px;
+    width: 350px;
+    border: 2px solid;
+}
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 120px;
+    font-size: 12px;
+    background-color: #bd4257;
+    color: #fff;
+    text-align: center;
+}
