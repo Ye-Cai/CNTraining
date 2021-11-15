@@ -4,12 +4,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="src/todolist.css">
+    <title>TODO-List</title>
 </head>
+<script src="src/todolist.js"></script>
 <body>
-  <div>
-<!--      todolist-->
-  </div>
-
+<div class="container">
+    <div class="title">todos</div>
+    <div class="todo-list">
+        <div class="input-container">
+            <input id="input" class="input" type="text" placeholder="What needs to be done?">
+        </div>
+        <div id="item-list" class="item-list">
+        </div>
+        <div class="operation-bar">
+            <span id="list-count">0 items left</span>
+            <div id="btn-group" class="btn-group">
+                <div id="all-btn" class="all-btn active">All</div>
+                <div id="active-btn" class="active-btn">Active</div>
+                <div id="completed-btn" class="completed-btn">Completed</div>
+            </div>
+            <div id="clear-btn" class="clear-btn">Clear completed</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,150 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    background: #FAFAFA;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 96px;
+    color: #F4DCDB;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FEFEFE;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);;
+}
+
+.input-container {
+    width: 450px;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-color: #FEFEFE;
+    border-width: 0;
+    background-size: 17px;
+    padding-left: 40px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-style: italic;
+    color: #CBCBCB;
+    opacity: 1;
+}
+
+*:focus {
+    outline-width: 0;
+}
+
+.item-list {
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding-left: 20px;
+    font-size: 16px;
+    border-top-width: 0.5px;
+    border-top-style: ridge;
+    position: relative;
+}
+
+.item:hover {
+    background-color: #e6eef8;
+}
+
+.item:hover .task {
+    background-size: 20px;
+    background-position: right 5% top 50%;
+    background-color: #e6eef8;
+}
+
+.task {
+    margin-left: 30px;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border-width: 0;
+}
+
+input:invalid {
+    border: 2px dashed red!important;
+}
+
+.task.completed{
+    text-decoration: line-through;
+    color: #D8D8D8;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 5%;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    top: 50%;
+    left: 3%;
+    transform: scale(1.25) translate(60%, -41%);
+    position: absolute;
+    margin: 0;
+}
+
+.checkbox-round:checked {
+    background-color: #ababab;
+}
+
+.operation-bar {
+    width: 450px;
+    height: 30px;
+    color: #7A7A7A;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    padding: 0 15px;
+    justify-content: space-between;
+    border-top-width: 0.5px;
+    border-top-style: ridge;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+}
+
+.btn-group [class*='-btn'].active {
+    border: 1px solid #FFA900;
+    padding: 1px 10px;
+    border-radius: 8px;
+}
+
+[class*='-btn'] {
+    cursor: pointer;
+}

@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar-top {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 7px 10px #dedede;
+    top: 0;
+}
+
+.navbar-top-logo__text {
+    flex: 1;
+    margin: auto 20px;
+}
+
+.navbar-top__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    font-size: 14px;
+    background: #fff;
+}
+
+.navbar-top__list_item {
+    justify-content: flex-end;
+}
+
+.navbar-top__list_item a {
+    color: black;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-top__list_item a:hover {
+    background-color: #e8eeef;
+}
+
+.content {
+    margin: 8%;
+}
+
+.content-title {
+    margin: 30px 0;
+}
+
+.content-box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-box-img {
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+
+.content-box-img span {
+    background: #000;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 6px;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+}
+
+.content__text {
+    line-height: 1.5;
+}
+
+.content-box-profile-wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-box-profile {
+    flex-basis: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.content-box-profile-name__text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.content-box-profile-position__text {
+    font-size: 16px;
+    color: #999999;
+    margin: 10px 0;
+}
+
+.content-box-profile-introduce__text {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.content-box-profile-contact__button {
+    height: 40px;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+button:hover {
+    background: #CCCCCC;
+}
+
+footer {
+    background-color: black;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
