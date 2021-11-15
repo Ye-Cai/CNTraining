@@ -1,0 +1,78 @@
+<!--请在浏览器中打开此html文件查看作业详情-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!doctype html>
+        <html lang="zh-Hans">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Title</title>
+            <link rel="stylesheet" href="./src/style/index.css">
+            <link rel="stylesheet" href="./src/style/tomorrow-night-eighties.css">
+
+        </head>
+
+<body>
+<h2>
+    Practice1
+</h2>
+<p>现有 <code>constant.js</code> 文件中存储了aws服务信息如下</p>
+<pre><code class="lang-javascript">
+    const ADDRESS = 'https://console.amazonaws.cn'
+    const PORT = 4455
+    const PATH = '/api'
+    const REGION = 'cn-north-1'
+  </code></pre>
+<p>要求，在 <code>utils.js</code> 方法中实现 <code>getURL</code> 方法，实现通过<code>(address, port, path)</code>获取url（即拼接，端口号前需要加:），并在 <code>index.js</code> 中使用该方法结合aws服务信息导出 url 和 region，满足测试。</p>
+<p><strong>要求如下</strong></p>
+<ol>
+    <li>使用ES6模块化进行实现</li>
+    <li><code>index.js</code>中导出的模块名为 <code>url</code> 和 <code>region</code></li>
+    <li><code>getURL</code> 方法的导出需要采用默认方式 (default)</li>
+</ol>
+<p>练习文件 <code>practice1</code>中</p>
+<hr/>
+<h2>
+    Practice2
+</h2>
+<p>实现一个小作业，要求如下：</p>
+<ol>
+    <li>现在有红灯、绿灯、黄灯，请通过方法返回颜色的方式模拟亮灯即可</li>
+    <li>要求红绿黄每隔一秒亮一次</li>
+    <li>并且这三个灯不断交替重复亮灯</li>
+    <li> 请用promise 实现</li>
+</ol>
+<p>练习文件 <code>practice2</code>中</p>
+<hr/>
+<h2>
+    Practice3
+</h2>
+<p>现有一个随机古诗词接口如下：</p>
+<pre><code class="lang-javascript">
+    // 使用 GET 请求 url：'https://v1.jinrishici.com/all.json' 可返回如下内容：
+    {
+      "content" : "天清一雁远，海阔孤帆迟。",
+      "origin" : "送张舍人之江东",
+      "author" : "李白",
+      "category" : "古诗文-抒情-离别"
+    }
+  </code></pre>
+<p>请使用Fetch api 实现 <code>getPoetry</code> 方法请求次接口获取古诗词，并返回如下内容</p>
+<pre><code class="lang-javascript">
+    ['送张舍人之江东', '李白', '天清一雁远，海阔孤帆迟。']
+  </code></pre>
+<p>尝试使用 Promise 和 async 函数两种写法，并体验不同，并包含错误处理</p>
+<p>练习文件 <code>practice3</code>中</p>
+</body>
+
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
