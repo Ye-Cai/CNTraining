@@ -47,20 +47,20 @@ describe("Person", () => {
     });
 
     describe("Teacher", () => {
-            const klasses = [new Class(2), new Class(3)];
+        const classes = [new Class(2), new Class(3)];
 
         it("should have field name, age and class number", () => {
-            const teacher = new Teacher(1, "Tom", 21, klasses);
+            const teacher = new Teacher(1, "Tom", 21, classes);
             expect(teacher.name).toEqual("Tom");
             expect(teacher.age).toEqual(21);
-            expect(teacher.klasses.length).toEqual(klasses.length);
-            expect(teacher.klasses[0]).toEqual(klasses[0]);
-            expect(teacher.klasses[1]).toEqual(klasses[1]);
+            expect(teacher.classes.length).toEqual(classes.length);
+            expect(teacher.classes[0]).toEqual(classes[0]);
+            expect(teacher.classes[1]).toEqual(classes[1]);
         });
 
         describe("#introduce", () => {
             it("should overwrite Person introduce, introduce with name, age and class number, given teacher have class", () => {
-                const teacher = new Teacher(1, "Tom", 21, klasses);
+                const teacher = new Teacher(1, "Tom", 21, classes);
                 const introduce = teacher.introduce();
                 expect(introduce).toEqual("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.");
             });
@@ -94,12 +94,12 @@ describe("Class", () => {
             klass.assignLeader(student);
 
             expect(klass.leader).toEqual(student);
-         });
+        });
 
         it("should not assign student as Leader, given student is not class member", () => {
             const klass = new Class(2);
-            const otherKlass = new Class(3);
-            const student = new Student(1, "Jerry", 21, otherKlass);
+            const otherClass = new Class(3);
+            const student = new Student(1, "Jerry", 21, otherClass);
 
             klass.assignLeader(student);
 
@@ -109,9 +109,9 @@ describe("Class", () => {
         it("should notify assign leader listeners", () => {
             console.log = jest.fn();
             const klass = new Class(2);
-            const otherKlass = new Class(3);
+            const otherClass = new Class(3);
             const student = new Student(1, "Jerry", 21, klass);
-            const teacher = new Teacher(1, "Tom", 21, [klass, otherKlass]);
+            const teacher = new Teacher(1, "Tom", 21, [klass, otherClass]);
 
             klass.registerAssignLeaderListener(teacher);
             klass.assignLeader(student);
@@ -123,11 +123,11 @@ describe("Class", () => {
     describe("#appendMemeber", () => {
         it("should change student's klass attribute", () => {
             const klass = new Class(2);
-            const otherKlass = new Class(3);
+            const otherClass = new Class(3);
 
-            const student = new Student(1, "Jerry", 21, otherKlass);
+            const student = new Student(1, "Jerry", 21, otherClass);
 
-            expect(student.klass).toEqual(otherKlass);
+            expect(student.klass).toEqual(otherClass);
 
             klass.appendMember(student);
 
@@ -138,10 +138,10 @@ describe("Class", () => {
             console.log = jest.fn();
 
             const klass = new Class(2);
-            const otherKlass = new Class(3);
-            const teacher = new Teacher(1, "Tom", 21, [klass, otherKlass]);
+            const otherClass = new Class(3);
+            const teacher = new Teacher(1, "Tom", 21, [klass, otherClass]);
 
-            const student = new Student(1, "Jerry", 21, otherKlass);
+            const student = new Student(1, "Jerry", 21, otherClass);
             klass.registerJoinListener(teacher);
 
             klass.appendMember(student);
